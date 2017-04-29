@@ -1,0 +1,38 @@
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row" text-center>
+    <ion-col>
+      <img src="img/doodlelogo.png"/>
+    </ion-col>
+  </ion-row>
+  <div class="login-box">
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-row text-center>
+            <ion-col>
+              <h4 class="login-text">Authenticate Login</h4>
+            </ion-col>
+          </ion-row>
+          <ion-list inset class="login-form">
+            <ion-item>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="text" name="email" [(ngModel)]="loginCredentials.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="loginCredentials.password" required></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.form.valid">Login</button>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header class="header">
+  <ion-toolbar color="secondary">
+    <ion-title text-center>Welcome {{currentUser}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-list padding>
+  <ion-item (click)="addUser()">
+    <ion-thumbnail item-left>
+      <img class="home-img" src="img/user.jpg">
+    </ion-thumbnail>
+    <h2>Users</h2>
+    <p>select to add users.</p>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img class="home-img" src="img/group.png">
+    </ion-thumbnail>
+    <h2>Groups</h2>
+    <p>View groups.</p>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img class="home-img" src="img/live.png">
+    </ion-thumbnail>
+    <h2>Live</h2>
+    <p>Streaming Live.</p>
+  </ion-item>
+</ion-list>
+
